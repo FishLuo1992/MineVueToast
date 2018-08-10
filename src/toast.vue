@@ -10,7 +10,12 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/styles/base.scss";
+/*设置rem的标准，以75为标准*/
+$baseWidth:37.5 !default;
+@function to($px) {
+    @return $px/$baseWidth*1rem;
+}
+
 .toast {
   position: fixed;
   height: 100%;
